@@ -1,2 +1,40 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<h1>Students</h1>
+ <% @user.each do |user| %>
+   <ul> 
+    <li><h1> <%= user["first_name"] %>  <%= user["last_name"] %> </h1></li> 
+    <li><h3> <%= user["email"] %> and <%= user["phone_number"] %></h3> </li>
+  </ul>
+ <% end %>
+
+
+
+
+
+
+
+
+
+<h1>Search Profile</h1>
+<%= form_tag "/students", method: "get" do %>
+  <div class="form-group">
+    City: <input type="text" class="form-control" name="City" >
+  </div>
+  <div class="form-group">
+    State: <input type="text" class="form-control" name="State">
+  </div>
+ 
+  <input type="submit" class="btn btn-default" value="Submit">
+<% end %>
+
+
+
+
+
+<!-- <h1>Weather Forcast</h1>
+   <ul> 
+    <li>
+     <h2> Chicago <%= @user["query"]["results"]["channel"]["location"]["city"] %></h2>
+     <h3> Forecast <%= @user["query"]["results"]["channel"]["item"]["forecast"] %></h3>
+     <p> Temp For The Day: <%= @user["query"]["results"]["channel"]["item"]["condition"]["temp"] %></p>
+    </li> -->
+   <!-- </ul> -->
