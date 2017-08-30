@@ -133,11 +133,14 @@
 
                <div class="twelve columns">
 
-                  <h3> <%= @student["educations"]["university_name"] %> </h3>
-                  <p class="info"> @Degree <span>&bull;</span> <em class="date">#{@Start_Date} #{End_Date} </em></p>
+                  <h3> <%= @student["educations"][0]["university_name"] %> </h3>
+                  <p class="info"> <%= @student["educations"][0]["degree"] %> <span>&bull;</span> <em class="date"> 
+                  <%= "#{@student["educations"][0]["start_date"]} - 
+                  #{@student["educations"][0]["end_date"]}"%> 
+                  </em></p>
 
                   <p>
-                      Details
+                     <%= @student["educations"][0]["details"] %>
                   </p>
 
                </div>
@@ -162,11 +165,12 @@
 
                <div class="twelve columns">
 
-                  <h3> @Company_Name </h3>
-                  <p class="info"> @Job_Title <span>&bull;</span> <em class="date">March 2010 - Present</em></p>
+                  <h3> <%= @student["experiences"][0]["company_name"] %>
+ </h3>
+                  <p class="info"> <%= @student["experiences"][0]["job_title"] %> <span>&bull;</span> <em class="date">March 2010 - Present</em></p>
 
                   <p>
-                  @Details
+                  <%= @student["experiences"][0]["details"] %>
                   </p>
 
                </div>
@@ -192,7 +196,7 @@
         <div class="bars">
 
            <ul class="skills">
-             <li><span class="bar-expand photoshop"></span><em> @skill_name </em></li>
+             <li><span class="bar-expand photoshop"></span><em> <%= @student["skills"][0]["name"] %> </em></li>
           </ul>
 
         </div><!-- end skill-bars -->
@@ -224,7 +228,7 @@
                         <img alt="" src="/images/portfolio/coffee.jpg">
                         <div class="overlay">
                            <div class="portfolio-item-meta">
-                          <h5> @Capstone </h5>
+                          <h5> <%= @student["capstones"][0]["name"] %> </h5>
                               
                        </div>
                         </div>
@@ -247,8 +251,8 @@
           <img class="scale-with-grid" src="/images/portfolio/modals/m-coffee.jpg" alt="" />
 
           <div class="description-box">
-            <h4> @Capstone </h4>
-            <p> @description </p>
+            <h4> <%= @student["capstones"][0]["name"] %> </h4>
+            <p> <%= @student["capstones"][0]["description"] %> </p>
                
           </div>
 
