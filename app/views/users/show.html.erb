@@ -56,14 +56,14 @@
 
       <div class="row banner">
          <div class="banner-text">
-            <h1 class="responsive-headline"> Hi I'm  @first_name </h1>
-            <h3> @bio <a class="smoothscroll" href="#about">start scrolling</a>
+            <h1 class="responsive-headline"> Hi I'm  <%= @student["first_name"] %> </h1>
+            <h3> <%= @student["bio"] %> <a class="smoothscroll" href="#about">start scrolling</a>
             and learn more <a class="smoothscroll" href="#about">about me</a>.</h3>
             <hr />
             <ul class="social">
-               <li><a title="Github" href="{@github_url}"><i class="fa fa-github"></i></a></li>
-               <li><a title="Twitter" href="https://twitter.com/#{@twitter}"><i class="fa fa-twitter"></i></a></li>
-               <li><a title="Blog" href="{@personal_blog_url}"><i class="fa fa-file-text-o"></i></a></li>
+               <li><a title="Github" href="{@student.github_url}"><i class="fa fa-github"></i></a></li>
+               <li><a title="Twitter" href="https://twitter.com/#{@studenttwitter}"><i class="fa fa-twitter"></i></a></li>
+               <li><a title="Blog" href="{@student.personal_blog_url}"><i class="fa fa-file-text-o"></i></a></li>
                <li><a title="LinkedIn" href="{@linkedin_url}"><i class="fa fa-linkedin"></i></a></li>
                <li><a title="Resume" href="{@online_resume_url}"><i class="fa fa-pencil-square-o"></i></a></li>
                
@@ -97,9 +97,9 @@
 
                   <h2>Contact Details</h2>
                   <p class="address">
-               <span> "#{first_name} #{first_name}" </span><br>
-               <span> @phone_number</span><br>
-                     <span> @email </span>
+               <span> <%= "#{@student["first_name"]} #{@student["last_name"]}"  %> </span><br>
+               <span> <%= @student["phone_number"] %> </span><br>
+                     <span> <%= @student["email"] %> </span>
              </p>
 
                </div>
@@ -133,7 +133,7 @@
 
                <div class="twelve columns">
 
-                  <h3> @University_Name</h3>
+                  <h3> <%= @student["educations"]["university_name"] %> </h3>
                   <p class="info"> @Degree <span>&bull;</span> <em class="date">#{@Start_Date} #{End_Date} </em></p>
 
                   <p>
