@@ -62,7 +62,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    render "show.html.erb"
+    render "show.html.erb", layout: nil
   end
 end
 
