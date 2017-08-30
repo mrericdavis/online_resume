@@ -1,58 +1,58 @@
 class UsersController < ApplicationController
   def index
 
-    response = Unirest.get("")
-    @user= response.body
+    # response = Unirest.get("")
+    # @user= response.body
     @students = [
       {
-        first_name: "rosa",
-        last_nam: "santiago",
-        email: "rsantiago@email.com",
-        phone_number: "555-555-555",
-        bio:"hello blah blah",
-        linkedin_url: " ",
-        twitter: "@rosa",
-        personal_blog_url: " ",
-        online_resume_url: " ",
-        github_url: " ",
-        photo: " ",
-        experiences: [
-          {Start_Date: " " , End_Date: " ", Job_Title: " ", Company_Name: " ", Details: " " }
+        "first_name" => "rosa",
+        "last_name" => "santiago",
+        "email" => "rsantiago@email.com",
+        "phone_number" => "555-555-555",
+        "bio" => "hello blah blah",
+        "linkedin_url" => " ",
+        "twitter" => "@rosa",
+        "personal_blog_url" => " ",
+        "online_resume_url" => " ",
+        "github_url" => " ",
+        "photo" => " ",
+        "experiences" => [
+          {"start_Date" => " " , "end_Date" => " ", "job_Title" => " ", "company_Name" => " ", "details" => " " }
         ],
-        education: [
-         {Start_Date: "", End_Date: " ", Degree: " ", University_Name: " ",  Details: "", }
+        "education" => [
+         {"start_Date" => "", "end_Date" => " ", "degree" => " ", "university_Name" => " ",  "details" => "", }
         ],
-        skills: [
-         {Skill_Name: "Reading"},
+        "skills" => [
+         {"skill_name" => "Reading"},
         ],
-        capstone: [
-         {Name: "", description: " ", url: " ", Screenshot: " "},
+        "capstone" => [
+         {"Name" => "", "description" => " ", "url" => " ", "Screenshot" => " "},
         ],
       },
         
         {
-        first_name: "bona",
-        last_nam: "martinez",
-        email: "bonam@email.com",
-        phone_number: "222-222-222",
-        bio:"goodbye punk",
-        linkedin_url: " ",
-        twitter: "@bona",
-        personal_blog_url: " ",
-        online_resume_url: " ",
-        github_url: " ",
-        photo: " ",
-        experiences: [
-          {Start_Date: " " , End_Date: " ", Job_Title: " ", Company_Name: " ", Details: " " }
+        "first_name" => "bona",
+        "last_name" => "martinez",
+        "email" => "bonam@email.com",
+        "phone_number" => "222-222-222",
+        "bio" => "goodbye punk",
+        "linkedin_url" => " ",
+        "twitter" => "@bona",
+        "personal_blog_url" => " ",
+        "online_resume_url" => " ",
+        "github_url" => " ",
+        "photo" => " ",
+        "experiences" => [
+          {"start_Date" => " " , "end_Date" => " ", "job_Title" => " ", "company_Name" => " ", "details" => " " }
         ],
-        education: [
-         {Start_Date: "", End_Date: " ", Degree: " ", University_Name: " ",  Details: "", }
+        "education" => [
+         {"start_Date" => "", "end_Date" => " ", "degree" => " ", "university_Name" => " ",  "details" => "", }
         ],
-        skills: [
-         {Skill_Name: "Writing"},
+        "skills" => [
+         {"skill_name" => "Writing"},
         ],
-        capstone: [
-         {Name: "", description: " ", url: " ", Screenshot: " "},
+        "capstone" => [
+         {"name" => "", "description" => " ", "url" => " ", "screenshot" => " "},
         ],
       },
     ]
