@@ -1,2 +1,65 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<nav class="color">
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo right">Online Resume</a>
+    <ul id="nav-mobile" class="center-align" class="color">
+
+    </ul>
+  </div>
+</nav>
+
+
+<h3> All Students</h3>
+
+
+
+      <div class="row">
+        <% @students.each do |user| %>
+          <div class="col m4">
+            <div class="card">
+              <div class="card-image">
+                  <img src="http://img.everychina.com/nimg/a5/1c/51a40da3c497d8f156c89fb4f8f2-600x600-0/2015_vintage_cute_lady_sinamay_hats_sinama_hat_sinamy_hat.jpg">
+                  <span  class="coloro" class="card-title"> <%= user["first_name"] %> <%= user["last_name"] %></span>
+              </div>
+              <div class="card-content">
+                <p> <%= user["bio"] %> </p>
+              </div>
+              <div class="card-action">
+                <a href="/students/<%= user["student_id"] %>">Check Out My Profile</a>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+
+
+
+
+<!-- <a class="twitter-grid" href="https://twitter.com/TwitterDev/timelines/539487832448843776">National Park Tweets</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+ -->
+
+
+
+
+
+
+<style type="text/css">
+  .img {
+    max-width: 200px;
+    max-height: 200px
+  }
+  .card-image img {
+    max-height: 300px;
+  }
+
+  .color{
+    background-color: black;
+  }
+
+  .coloro{
+     color: black;
+  }
+
+  body{
+    background: url("https://static.pexels.com/photos/374710/pexels-photo-374710.jpeg");
+  }
+</style>

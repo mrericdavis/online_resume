@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
   get "/" => "users#index"
-  get "/students" => "users#show"
+  get "/students/:id" => "users#show"
   
 end
