@@ -25,6 +25,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @user = user.find_by(student_id: params[:student_id])
 
 
     render "show.html.erb"
