@@ -62,6 +62,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @student = Unirest.get("https://fierce-sea-36317.herokuapp.com/students/#{params[:id]}").body
     render "show.html.erb", layout: nil
   end
 end
